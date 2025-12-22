@@ -16,7 +16,7 @@
 - **widgets** - крупные UI блоки (header, product-card)
 - **features** - действия пользователя (add-to-cart, auth)
 - **entities** - данные (product, user, cart)
-- **shared** - переиспользуемый код (UI kit, утилиты)
+- **shared** - переиспользуемый код (UI kit, утилиты, shadcn/ui компоненты)
 
 ## 📚 Шаг 2: Изучите примеры
 
@@ -52,6 +52,29 @@ formatPrice(1500); // "1 500 ₽"
 import { api } from '@/shared/api';
 
 const response = await api.get('/products');
+```
+
+### 🎨 shadcn/ui компоненты
+```bash
+# Добавьте компоненты по мере необходимости:
+pnpm dlx shadcn@latest add button
+pnpm dlx shadcn@latest add card
+
+# Компоненты будут добавлены в src/shared/ui/
+```
+
+```tsx
+// Использование shadcn/ui компонентов
+import { Button } from '@/shared/ui/button';
+import { Card } from '@/shared/ui/card';
+```
+
+### 🎨 Tailwind CSS
+```tsx
+// Используйте Tailwind utility classes
+<div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-md">
+  <h1 className="text-2xl font-bold">Привет!</h1>
+</div>
 ```
 
 ## 🚀 Шаг 3: Создайте свою первую сущность
@@ -287,9 +310,14 @@ pnpm add react-router-dom
 pnpm add react-hook-form
 ```
 
-### UI библиотеки (опционально)
-- **Radix UI** - headless компоненты
-- **shadcn/ui** - красивые компоненты
+### UI библиотеки
+- **shadcn/ui** - уже настроено! Добавляйте компоненты по мере необходимости
+- **Radix UI** - headless компоненты (уже включены в shadcn/ui)
+
+```bash
+# Добавление компонентов shadcn/ui
+pnpm dlx shadcn@latest add button card input
+```
 
 ## 🎓 Полезные ссылки
 

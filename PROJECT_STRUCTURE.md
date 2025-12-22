@@ -11,9 +11,6 @@ clickfood/
 │   │   ├── App.tsx              # ✅ Главный компонент
 │   │   └── README.md            # ✅ Документация
 │   │
-│   ├── processes/               # 🔄 Межстраничные процессы
-│   │   └── README.md            # ✅ Документация
-│   │
 │   ├── pages/                   # 📄 Страницы приложения
 │   │   └── README.md            # ✅ Документация
 │   │
@@ -35,8 +32,10 @@ clickfood/
 │   │   ├── lib/                 # Библиотеки и утилиты
 │   │   │   ├── hooks/           # React хуки
 │   │   │   │   └── useDebounce.ts  # ✅ Пример
-│   │   │   └── utils/           # Утилиты
-│   │   │       └── format.ts    # ✅ Пример
+│   │   │   ├── utils/           # Утилиты
+│   │   │   │   ├── format.ts    # ✅ Пример
+│   │   │   │   └── utils.ts     # ✅ shadcn/ui cn() helper
+│   │   │   └── hooks/           # React хуки
 │   │   ├── api/                 # API клиент
 │   │   │   ├── instance.ts      # ✅ Настройка axios
 │   │   │   ├── types.ts         # ✅ API типы
@@ -58,9 +57,10 @@ clickfood/
 ├── package.json
 ├── pnpm-lock.yaml
 ├── tsconfig.app.json            # ✅ Настроены path aliases
-├── tsconfig.json
+├── tsconfig.json                # ✅ Настроены path aliases
 ├── tsconfig.node.json
-├── vite.config.ts               # ✅ Настроены path aliases
+├── vite.config.ts               # ✅ Настроены path aliases + Tailwind plugin
+├── components.json              # ✅ shadcn/ui конфигурация
 ├── README.md                    # ✅ Документация проекта
 └── GETTING_STARTED.md           # ✅ Руководство по началу
 
@@ -82,8 +82,10 @@ clickfood/
 - ✅ Структура FSD
 - ✅ TypeScript конфигурация
 - ✅ Vite конфигурация
+- ✅ Tailwind CSS v4 с @tailwindcss/vite plugin
+- ✅ shadcn/ui готов к добавлению компонентов
 - ✅ Path aliases (@/app, @/shared, etc.)
-- ✅ Глобальные стили и CSS переменные
+- ✅ Глобальные стили
 - ✅ Примеры компонентов
 - ✅ Документация с примерами
 
