@@ -1,0 +1,12 @@
+import './styles/global.css';
+
+function App() {
+    return (
+        <div className="app">
+            <h1>ClickFood</h1>
+            <p>Приложение готово к разработке с архитектурой Feature-Sliced Design! 🚀</p>
+        </div>
+    );
+}
+
+export default App;
