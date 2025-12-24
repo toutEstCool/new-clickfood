@@ -1,0 +1,7 @@
+export { default as AppRouter } from './ui/AppRouter'
+export { routeConfig } from './config/routeConfig'
+export { ProtectedRoute } from './guards/ProtectedRoute'
+export { PublicRoute } from './guards/PublicRoute'
+export { ScrollToTop } from './utils/ScrollToTop'
+export { useActiveRoute, useBreadcrumbs, useTypedParams } from './utils/hooks'
+export type { AppRoutesProps, UserRole } from '@/shared/types/router'

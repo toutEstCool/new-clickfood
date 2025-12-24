@@ -4,7 +4,7 @@ export enum AppRoutes {
 
   // webapp
   WEBAPP_HOME = 'webapp_home',
-  PROFILE = 'profile',
+  PROFILE = 'profile/:id',
   PRIVACY_POLICY = 'privacy_policy',
   PUBLIC_OFFER = 'public_offer',
   FALLBACK = 'fallback',
