@@ -8,15 +8,12 @@ src/
 │   └── providers/
 │       └── Router/
 │           ├── config/
-│           │   ├── routeConfig.tsx          ❌ Старая (deprecated)
-│           │   └── routeConfigNew.tsx       ✅ Новая (Nested Routes)
+│           │   └── routeConfig.tsx          ✅ Новая (Nested Routes)
 │           ├── guards/
-│           │   ├── AuthGuard.tsx            ❌ Старый (deprecated)
 │           │   ├── ProtectedRoute.tsx       ✅ Новый (Protected Routes)
 │           │   └── PublicRoute.tsx          ✅ Новый (Public Routes)
 │           ├── ui/
-│           │   ├── AppRouter.tsx            ❌ Старый (deprecated)
-│           │   └── AppRouterNew.tsx         ✅ Новый (useRoutes)
+│           │   └── AppRouter.tsx            ✅ Новый (useRoutes)
 │           ├── utils/
 │           │   ├── ScrollToTop.tsx          ✅ Scroll utility
 │           │   └── hooks.ts                 ✅ Router hooks
