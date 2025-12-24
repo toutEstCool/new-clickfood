@@ -1,6 +1,7 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
 import { getRouteMain } from '@/shared/constants/router'
 import type { UserRole } from '@/shared/types/router'
+import { useAuth } from '@/features/Auth'
 
 interface ProtectedRouteProps {
   roles?: UserRole[]
@@ -18,11 +19,16 @@ interface ProtectedRouteProps {
  */
 export const ProtectedRoute = ({ roles, redirectTo = getRouteMain() }: ProtectedRouteProps) => {
   const location = useLocation()
+  const { isAuth, user, isLoading } = useAuth()
 
-  // TODO: Получить из контекста авторизации
-  // const { isAuth, user } = useAuth()
-  const isAuth = false // Временная заглушка
-  const userRole: UserRole | null = null // Временная заглушка
+  // Показываем загрузку, пока проверяем авторизацию
+  if (isLoading) {
+    return (
+      <div style={{ padding: '20px', textAlign: 'center' }}>
+        <div>Checking authentication...</div>
+      </div>
+    )
+  }
 
   // Проверка авторизации
   if (!isAuth) {
@@ -32,7 +38,7 @@ export const ProtectedRoute = ({ roles, redirectTo = getRouteMain() }: Protected
 
   // Проверка ролей (если указаны)
   if (roles && roles.length > 0) {
-    const hasRequiredRole = userRole && roles.includes(userRole)
+    const hasRequiredRole = user?.role && roles.includes(user.role)
 
     if (!hasRequiredRole) {
       // Пользователь авторизован, но не имеет нужной роли

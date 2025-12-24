@@ -13,6 +13,9 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
+  server: {
+    allowedHosts: ["endocrinous-preston-unstout.ngrok-free.dev"]
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

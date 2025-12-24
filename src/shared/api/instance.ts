@@ -3,9 +3,11 @@
 // ============================================
 
 import axios from 'axios'
+import { getAuthToken } from '@/features/Auth/lib/tokenStorage'
 
 // Базовый URL из переменных окружения
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api'
+// Замените на свой URL бэкенда
+const API_URL = import.meta.env.VITE_API_URL || 'https://your-backend-url.com/api'
 
 // Создаем экземпляр axios
 export const api = axios.create({
@@ -16,10 +18,10 @@ export const api = axios.create({
   },
 })
 
-// Request interceptor - добавляем токен к каждому запросу
+// Request interceptor - добавляем JWT токен к каждому запросу
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('token')
+    const token = getAuthToken() // Используем наш tokenStorage
     if (token) {
       config.headers.Authorization = `Bearer ${token}`
     }
