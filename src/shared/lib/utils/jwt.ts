@@ -6,7 +6,13 @@
 interface JwtPayload {
   user_id?: string | number
   user_role?: string
+  chat_id?: string | number
+  first_name?: string
+  nick_name?: string
   source?: string
+  points?: number
+  start_time?: string
+  lang?: string
   exp?: number
   iat?: number
   [key: string]: unknown

@@ -121,7 +121,10 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
     return {
       id: String(payload.user_id),
+      chatId: payload.chat_id ? String(payload.chat_id) : undefined,
       role: (payload.user_role as UserRole) || UserRole.USER,
+      firstName: payload.first_name,
+      nickName: payload.nick_name,
       source: payload.source,
     }
   }, [token])
