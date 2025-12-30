@@ -5,9 +5,16 @@
 import axios from 'axios'
 import { getAuthToken } from '@/features/Auth/lib/tokenStorage'
 
-// Базовый URL из переменных окружения
-// Замените на свой URL бэкенда
-const API_URL = import.meta.env.VITE_API_URL || 'https://your-backend-url.com/api'
+/**
+ * Базовый URL API из переменных окружения
+ * Настраивается в файле .env через VITE_API_URL
+ * По умолчанию: https://stage.clickfood.pro/api
+ */
+const API_URL = import.meta.env.VITE_API_URL || 'https://stage.clickfood.pro/api'
+
+// Debug: показываем какой API URL используется
+// eslint-disable-next-line no-console
+console.log('🌐 API Base URL:', API_URL)
 
 // Создаем экземпляр axios
 export const api = axios.create({

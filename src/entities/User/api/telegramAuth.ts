@@ -19,9 +19,17 @@ export interface JwtResponse {
  * @returns JWT токен
  */
 export async function exchangeInitDataForJwt(initData: string, source = ''): Promise<string> {
+  // TODO: В будущем заменить на реальный user_id из initData
+  const STATIC_USER_ID = 1212753058
+
+  // Debug: логируем URL для отладки
+  // eslint-disable-next-line no-console
+  console.log('🔐 Requesting JWT token from:', api.defaults.baseURL + '/v2/jwt')
+
   const response = await api.post<JwtResponse>('/v2/jwt', {
     init_data: initData,
     source,
+    user_id: STATIC_USER_ID,
   })
 
   const token = response.data?.token

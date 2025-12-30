@@ -12,6 +12,9 @@ import { ProtectedRoute } from '../guards/ProtectedRoute'
 import { UserRole } from '@/shared/types/router'
 import { getRouteProfile, getRouteWebApp } from '@/shared/constants/router'
 
+// Pages
+import { TestAuthPage } from '@/pages/TestAuth'
+
 // ============================================================================
 // Temporary Page Components (пока не созданы реальные страницы)
 // ============================================================================
@@ -49,6 +52,10 @@ export const routeConfig: RouteObject[] = [
       {
         index: true,
         element: <TempPage title="Main Page" />,
+      },
+      {
+        path: 'test-auth',
+        element: <TestAuthPage />,
       },
 
       // ========================================================================
