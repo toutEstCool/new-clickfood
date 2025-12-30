@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+# Run lint-staged for linting and formatting staged files
+pnpm exec lint-staged
+
+# Run type checking on the entire project
+pnpm run type-check

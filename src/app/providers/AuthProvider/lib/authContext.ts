@@ -3,7 +3,10 @@ import type { UserRole } from '@/shared/types/router'
 
 export interface JwtUser {
   id: string
+  phone: string
   role: UserRole
+  name?: string
+  email?: string
   source?: string
 }
 
