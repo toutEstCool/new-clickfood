@@ -1,11 +1,15 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { retrieveLaunchParams } from '@tma.js/sdk-react'
-import { UserRole } from '@/shared/types/router'
-import { getAuthToken, clearAuthToken } from '@/features/Auth/lib/tokenStorage'
+import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+
 import { decodeJwt, isJwtExpired } from '@/shared/lib/utils/jwt'
+import { UserRole } from '@/shared/types/router'
+
 import { exchangeInitDataForJwt } from '@/entities/User/api/telegramAuth'
+
+import { clearAuthToken, getAuthToken } from '@/features/Auth/lib/tokenStorage'
+
 import { AuthContext, type JwtUser } from '../lib/authContext'
 import { queryClient } from '../lib/queryClient'
 

@@ -1,6 +1,8 @@
-import { useAuth } from '@/features/Auth'
-import { exchangeInitDataForJwt } from '@/entities/User/api/telegramAuth'
 import { UserRole } from '@/shared/types/router'
+
+import { exchangeInitDataForJwt } from '@/entities/User/api/telegramAuth'
+
+import { useAuth } from '@/features/Auth'
 
 export const TestAuthPage = () => {
   const { user, isAuth, token, logout, hasRole } = useAuth()

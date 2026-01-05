@@ -2,10 +2,10 @@
  * Telegram Auth API
  * Обмен initData от Telegram на JWT токен
  */
-
 import { api } from '@/shared/api/instance'
-import { setAuthToken } from '@/features/Auth/lib/tokenStorage'
 import { decodeJwt } from '@/shared/lib/utils/jwt'
+
+import { setAuthToken } from '@/features/Auth/lib/tokenStorage'
 
 export interface JwtResponse {
   token: string

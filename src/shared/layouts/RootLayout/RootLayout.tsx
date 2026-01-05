@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router-dom'
 import { Suspense } from 'react'
+import { Outlet } from 'react-router-dom'
 
 /**
  * RootLayout - корневой layout для всего приложения

@@ -2,8 +2,8 @@
  * User API
  * Все API-запросы, связанные с пользователем и авторизацией
  */
-
 import { api } from '@/shared/api/instance'
+
 import type { AuthResponse, PhoneAuthRequest, User } from '../model/types'
 
 /**

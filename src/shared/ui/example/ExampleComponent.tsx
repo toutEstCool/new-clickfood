@@ -2,8 +2,7 @@
 // ПРИМЕР: Демонстрация правил линтера
 // Этот файл показывает правильное использование
 // ============================================
-
-import { useState, type FC, type ReactNode } from 'react'
+import { type FC, type ReactNode, useState } from 'react'
 
 // ✅ Интерфейс в PascalCase
 interface ExampleCardProps {

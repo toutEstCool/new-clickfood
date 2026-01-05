@@ -2,7 +2,6 @@
  * User Entity Types
  * Типы для работы с пользователем и авторизацией
  */
-
 import type { UserRole } from '@/shared/types/router'
 
 /**

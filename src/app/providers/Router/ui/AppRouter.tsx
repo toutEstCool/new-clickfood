@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import { useRoutes } from 'react-router-dom'
+
 import { routeConfig } from '../config/routeConfig'
 
 /**

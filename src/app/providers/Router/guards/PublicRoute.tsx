@@ -1,4 +1,5 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
+
 import { getRouteWebApp } from '@/shared/constants/router'
 
 interface PublicRouteProps {

@@ -1,8 +1,8 @@
 // ============================================
 // ПРИМЕР: Базовая настройка API клиента
 // ============================================
-
 import axios from 'axios'
+
 import { getAuthToken } from '@/features/Auth/lib/tokenStorage'
 
 /**

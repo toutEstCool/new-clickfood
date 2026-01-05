@@ -1,6 +1,8 @@
 import { Component, type ErrorInfo, type ReactNode } from 'react'
+
+import { getErrorContext, logError } from '../lib/errorLogger'
+
 import { ErrorFallback } from './ErrorFallback'
-import { logError, getErrorContext } from '../lib/errorLogger'
 
 interface ErrorBoundaryProps {
   children: ReactNode

@@ -1,7 +1,10 @@
-import { useAuth } from '@/features/Auth'
 import { AuthLoadingScreen } from '@/shared/ui/AuthLoadingScreen'
+
+import { useAuth } from '@/features/Auth'
+
 import AppRouter from './providers/Router/ui/AppRouter'
 import { ScrollToTop } from './providers/Router/utils/ScrollToTop'
+
 import './styles/global.css'
 
 /**

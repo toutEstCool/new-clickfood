@@ -1,4 +1,5 @@
 import { createContext } from 'react'
+
 import type { UserRole } from '@/shared/types/router'
 
 export interface JwtUser {

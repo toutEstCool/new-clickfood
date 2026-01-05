@@ -2,11 +2,13 @@
  * User React Query Hooks
  * Хуки для работы с пользователем через React Query
  */
-
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import type { PhoneAuthRequest, User } from './types'
+
+import { clearTokens, saveTokens } from '@/features/Auth/lib/tokenStorage'
+
 import * as userApi from '../api/userApi'
-import { saveTokens, clearTokens } from '@/features/Auth/lib/tokenStorage'
+
+import type { PhoneAuthRequest, User } from './types'
 
 /**
  * Query Keys для React Query

@@ -51,6 +51,9 @@ importers:
       '@eslint/js':
         specifier: ^9.39.1
         version: 9.39.2
+      '@trivago/prettier-plugin-sort-imports':
+        specifier: ^6.0.1
+        version: 6.0.1(prettier@3.7.4)
       '@types/node':
         specifier: ^24.10.1
         version: 24.10.4
@@ -679,6 +682,25 @@ packages:
 
   '@tma.js/types@1.0.2':
     resolution: {integrity: sha512-qs4mi+U1xZmMQBdMhWAo1X4YqUJ/ae0y28s+GNCpQq58bsJo0h8rvyVOB1RwPvXogIY9+yribbZe6z3AIJmsAQ==}
+
+  '@trivago/prettier-plugin-sort-imports@6.0.1':
+    resolution: {integrity: sha512-6B13DCWDfAfh4AEJ43gRgeCSAQmlKG5LHqHzHc0lbUwgBy0rX7o41US+46Fd4XiXBx+JDGEz3NBadCbUls0dUQ==}
+    engines: {node: '>= 20'}
+    peerDependencies:
+      '@vue/compiler-sfc': 3.x
+      prettier: 2.x - 3.x
+      prettier-plugin-ember-template-tag: '>= 2.0.0'
+      prettier-plugin-svelte: 3.x
+      svelte: 4.x || 5.x
+    peerDependenciesMeta:
+      '@vue/compiler-sfc':
+        optional: true
+      prettier-plugin-ember-template-tag:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+      svelte:
+        optional: true
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -1503,6 +1525,9 @@ packages:
     resolution: {integrity: sha512-H0dkQoCa3b2VEeKQBOxFph+JAbcrQdE7KC0UkqwpLmv2EC4P41QXP+rqo9wYodACiG5/WM5s9oDApTU8utwj9g==}
     engines: {node: '>= 0.4'}
 
+  javascript-natural-sort@0.7.1:
+    resolution: {integrity: sha512-nO6jcEfZWQXDhOiBtG2KvKyEptz7RVbpGP4vTD2hLBdmNQSsCiicO2Ioinv6UI4y9ukqnBpy+XZ9H6uLNgJTlw==}
+
   jiti@2.6.1:
     resolution: {integrity: sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==}
     hasBin: true
@@ -1627,6 +1652,9 @@ packages:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
 
+  lodash-es@4.17.22:
+    resolution: {integrity: sha512-XEawp1t0gxSi9x01glktRZ5HDy0HXqrM0x5pXQM98EaI0NxO6jVM7omDOxsuEo5UIASAnm2bRp1Jt/e0a2XU8Q==}
+
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
@@ -1748,6 +1776,12 @@ packages:
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
+
+  parse-imports-exports@0.2.4:
+    resolution: {integrity: sha512-4s6vd6dx1AotCx/RCI2m7t7GCh5bDRUtGNvRfHSP2wbBQdMi67pPe7mtzmgwcaQ8VKK/6IB7Glfyu3qdZJPybQ==}
+
+  parse-statements@1.0.11:
+    resolution: {integrity: sha512-HlsyYdMBnbPQ9Jr/VgJ1YF4scnldvJpJxCVx6KgqPL4dxppsWrJHCIIxQXMJrqGnsRkNPATbeMJ8Yxu7JMsYcA==}
 
   path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
@@ -2646,6 +2680,20 @@ snapshots:
       - typescript
 
   '@tma.js/types@1.0.2': {}
+
+  '@trivago/prettier-plugin-sort-imports@6.0.1(prettier@3.7.4)':
+    dependencies:
+      '@babel/generator': 7.28.5
+      '@babel/parser': 7.28.5
+      '@babel/traverse': 7.28.5
+      '@babel/types': 7.28.5
+      javascript-natural-sort: 0.7.1
+      lodash-es: 4.17.22
+      minimatch: 9.0.5
+      parse-imports-exports: 0.2.4
+      prettier: 3.7.4
+    transitivePeerDependencies:
+      - supports-color
 
   '@types/babel__core@7.20.5':
     dependencies:
@@ -3693,6 +3741,8 @@ snapshots:
       has-symbols: 1.1.0
       set-function-name: 2.0.2
 
+  javascript-natural-sort@0.7.1: {}
+
   jiti@2.6.1: {}
 
   js-tokens@4.0.0: {}
@@ -3798,6 +3848,8 @@ snapshots:
   locate-path@6.0.0:
     dependencies:
       p-locate: 5.0.0
+
+  lodash-es@4.17.22: {}
 
   lodash.merge@4.6.2: {}
 
@@ -3926,6 +3978,12 @@ snapshots:
   parent-module@1.0.1:
     dependencies:
       callsites: 3.1.0
+
+  parse-imports-exports@0.2.4:
+    dependencies:
+      parse-statements: 1.0.11
+
+  parse-statements@1.0.11: {}
 
   path-exists@4.0.0: {}
 

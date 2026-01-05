@@ -1,16 +1,16 @@
 import { Navigate, type RouteObject } from 'react-router-dom'
 
+import { getRouteProfile, getRouteWebApp } from '@/shared/constants/router'
+import { PartnerLayout } from '@/shared/layouts/MainLayout'
+import { OrderLayout } from '@/shared/layouts/OrderLayout'
 // Layouts
 import { RootLayout } from '@/shared/layouts/RootLayout'
-import { WebAppLayout } from '@/shared/layouts/WebAppLayout'
-import { PartnerLayout } from '@/shared/layouts/MainLayout'
 import { SuperadminLayout } from '@/shared/layouts/SuperadminLayout'
-import { OrderLayout } from '@/shared/layouts/OrderLayout'
+import { WebAppLayout } from '@/shared/layouts/WebAppLayout'
+import { UserRole } from '@/shared/types/router'
 
 // Guards
 import { ProtectedRoute } from '../guards/ProtectedRoute'
-import { UserRole } from '@/shared/types/router'
-import { getRouteProfile, getRouteWebApp } from '@/shared/constants/router'
 
 // Pages
 import { TestAuthPage } from '@/pages/TestAuth'

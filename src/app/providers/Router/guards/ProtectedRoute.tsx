@@ -1,6 +1,8 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
+
 import { getRouteMain } from '@/shared/constants/router'
 import type { UserRole } from '@/shared/types/router'
+
 import { useAuth } from '@/features/Auth'
 
 interface ProtectedRouteProps {

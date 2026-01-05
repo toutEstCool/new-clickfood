@@ -2,8 +2,8 @@
  * useAuth Hook for Telegram Mini App
  * Управление авторизацией через JWT токен от Telegram
  */
-
 import { useContext } from 'react'
+
 import { AuthContext } from '@/app/providers/AuthProvider'
 
 /**
